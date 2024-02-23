@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
+from selenium.webdriver.common.keys import Keys
 
 #Parte que faz o site abrir no WhatsApp Web
 service = Service(ChromeDriverManager().install())
@@ -18,6 +19,10 @@ lista_contatos = ["Nivea Mana Love", "Priscila Prisgay", "Glauco Silva"]
 
 #clicar na lupa
 nav.find_element('xpath', '//*[@id="side"]/div[1]/div/div[2]/button/div[2]/span').click()
+#escreve na lupa
+nav.find_element('xpath', '//*[@id="side"]/div[1]/div/div[2]/div[2]/div/div[1]/p').send_keys('Nivea Mana Love')
+#aperta o enter - para isso tem que importar a chave (Keys)
+nav.find_element('xpath', '//*[@id="side"]/div[1]/div/div[2]/div[2]/div/div[1]/p').send_keys(keys.ENTER)
 
 
 
