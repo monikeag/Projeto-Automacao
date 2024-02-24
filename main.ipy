@@ -6,7 +6,7 @@ from time import sleep
 service = Service(ChromeDriverManager().install())
 nav = webdriver.Chrome(service=service)
 nav.get("https://web.whatsapp.com")
-sleep (10)
+#sleep (10)
 
 from selenium.webdriver.common.keys import Keys
 
