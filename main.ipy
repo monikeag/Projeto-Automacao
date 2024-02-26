@@ -6,6 +6,8 @@ from selenium.webdriver.common.keys import Keys
 service = Service(ChromeDriverManager().install())
 nav = webdriver.Chrome(service=service)
 nav.get("https://web.whatsapp.com")
+input()
+
 mensagem = """ Olá, tudo bem? Esta mensagem esta sendo enviada por automação.
 Não precisa responder! Estou testando!"""
 lista_contatos = ["Glauco Silva", "Nivea Mana Love", "Priscila Prisgay", "Any"]
@@ -16,6 +18,7 @@ nav.find_element('xpath', '//*[@id="side"]/div[1]/div/div[2]/button/div[2]/span'
 nav.find_element('xpath', '//*[@id="side"]/div[1]/div/div[2]/div[2]/div/div[1]/p').send_keys('Glauco Silva')
 ##aperta o enter - para isso tem que importar a chave (Keys)
 nav.find_element('xpath', '//*[@id="side"]/div[1]/div/div[2]/div[2]/div/div[1]/p').send_keys(Keys.ENTER)
+
 
 
 
